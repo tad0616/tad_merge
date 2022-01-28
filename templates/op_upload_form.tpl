@@ -15,13 +15,13 @@
 </script>
 
 <form action="" method="post" enctype='multipart/form-data'>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right"><{$smarty.const._MD_TADMERGE_MERGER_UPLOAD_XLSX}></label>
+    <div class="form-group row mb-3">
+        <label class="col-sm-3 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_UPLOAD_XLSX}></label>
         <div class="col-sm-3">
             <input type="file" name="xlsx" id="xlsx" accept=".xlsx" class="form-control">
         </div>
         <{if $data_file_arr}>
-                <label class="col-sm-2 col-form-label text-right"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE}></label>
+                <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE}></label>
                 <div class="col-sm-4">
                     <select name="data_sn" class="form-control">
                         <option value=""></option>
@@ -32,13 +32,13 @@
                 </div>
         <{/if}>
     </div>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label text-right"><{$smarty.const._MD_TADMERGE_MERGER_UPLOAD_ODT}></label>
+    <div class="form-group row mb-3">
+        <label class="col-sm-3 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_UPLOAD_ODT}></label>
         <div class="col-sm-3">
             <input type="file" name="odt" id="odt" accept=".odt" class="form-control">
         </div>
         <{if $temp_file_arr}>
-                <label class="col-sm-2 col-form-label text-right"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_TPL_FILE}></label>
+                <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_TPL_FILE}></label>
                 <div class="col-sm-4">
                     <select name="temp_sn" class="form-control">
                         <option value=""></option>
@@ -49,7 +49,7 @@
                 </div>
         <{/if}>
     </div>
-    <div class="form-group row">
+    <div class="form-group row mb-3">
         <div class="offset-sm-3 col-sm-9">
             <button type="submit" class="btn btn-primary" name="op" value="upload"><{$smarty.const._MD_TADMERGE_MERGE}></button>
         </div>
