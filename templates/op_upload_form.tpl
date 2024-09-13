@@ -64,7 +64,7 @@
             <th class="c"><{$smarty.const._TAD_FUNCTION}></th>
         </tr>
         <{foreach from=$my_data_files key=data_files_sn item=file}>
-            <{assign var=rowspan value=$file.temp_files|@sizeof}>
+            <{assign var="rowspan" value=$file.temp_files|@sizeof}>
             <{foreach from=$file.temp_files key=sort item=temp_files name=foo}>
                 <{foreach from=$temp_files key=temp_files_sn item=temp_file}>
                     <tr>
