@@ -20,7 +20,7 @@
         <div class="col-sm-3">
             <input type="file" name="xlsx" id="xlsx" accept=".xlsx" class="form-control">
         </div>
-        <{if $data_file_arr}>
+        <{if $data_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE}></label>
                 <div class="col-sm-4">
                     <select name="data_sn" class="form-control">
@@ -37,7 +37,7 @@
         <div class="col-sm-3">
             <input type="file" name="odt" id="odt" accept=".odt" class="form-control">
         </div>
-        <{if $temp_file_arr}>
+        <{if $temp_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_TPL_FILE}></label>
                 <div class="col-sm-4">
                     <select name="temp_sn" class="form-control">
@@ -56,7 +56,7 @@
     </div>
 </form>
 
-<{if $my_data_files}>
+<{if $my_data_files|default:false}>
     <table class="table table-bordered" >
         <tr class="bg-light">
             <th class="c"><{$smarty.const._MD_TADMERGE_MERGER_XLSX_FILE}></th>
