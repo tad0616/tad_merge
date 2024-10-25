@@ -43,11 +43,12 @@ $modversion['min_php'] = '5.4';
 $modversion['min_xoops'] = '2.5';
 
 //---paypal資訊---//
-$modversion['paypal'] = array();
-$modversion['paypal']['business'] = 'tad0616@gmail.com';
-$modversion['paypal']['item_name'] = 'Donation :' . _MI_TADMERGE_AUTHOR;
-$modversion['paypal']['amount'] = 0;
-$modversion['paypal']['currency_code'] = 'USD';
+$modversion['paypal'] = [
+    'business' => 'tad0616@gmail.com',
+    'item_name' => 'Donation : ' . _MI_TAD_WEB,
+    'amount' => 0,
+    'currency_code' => 'USD',
+];
 
 //---安裝設定---//
 $modversion['onInstall'] = "include/onInstall.php";
@@ -56,8 +57,10 @@ $modversion['onUninstall'] = "include/onUninstall.php";
 
 //---資料表架構---//
 $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
-$modversion['tables'][] = "tad_merge_data_center";
-$modversion['tables'][] = "tad_merge_files_center";
+$modversion['tables'] = [
+    "tad_merge_data_center",
+    "tad_merge_files_center",
+];
 
 //---後台使用系統選單---//
 $modversion['system_menu'] = 1;
@@ -71,8 +74,7 @@ $modversion['adminmenu'] = 'admin/menu.php';
 $modversion['hasMain'] = 1;
 
 //---樣板設定---//
-$modversion['templates'][] = array('file' => 'tad_merge_admin.tpl', 'description' => 'tad_merge_admin.tpl');
-$modversion['templates'][] = array('file' => 'tad_merge_index.tpl', 'description' => 'tad_merge_index.tpl');
-
-//---區塊設定---//
-$i = 0;
+$modversion['templates'] = [
+    ['file' => 'tad_merge_admin.tpl', 'description' => 'tad_merge_admin.tpl'],
+    ['file' => 'tad_merge_index.tpl', 'description' => 'tad_merge_index.tpl'],
+];

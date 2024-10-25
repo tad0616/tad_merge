@@ -116,7 +116,7 @@ function upload($data_sn = '', $temp_sn = '')
 // 合併
 function merge($data_sn, $temp_sn)
 {
-    global $uid, $TadUpFiles, $TadDataCenter;
+    global $uid, $TadUpFiles;
 
     $temp_file = $TadUpFiles->get_file($temp_sn);
     require_once __DIR__ . '/class/dunzip2/dUnzip2.inc.php';
@@ -172,9 +172,6 @@ function merge($data_sn, $temp_sn)
 //下載
 function mk_odt($from = "", $to = "", $i = "", $filename = '', $zero_count = 3)
 {
-    global $xoopsDB, $xoopsModuleConfig;
-
-    // $msg = shell_exec("zip -r -j {$to}/{$i}.zip {$from}");
 
     include_once 'class/pclzip.lib.php';
     Utility::mk_dir($to);
@@ -188,7 +185,7 @@ function mk_odt($from = "", $to = "", $i = "", $filename = '', $zero_count = 3)
 //下載
 function download_all($data_sn, $temp_sn)
 {
-    global $xoopsDB, $uid, $TadUpFiles;
+    global $uid, $TadUpFiles;
 
     $temp_file = $TadUpFiles->get_file($temp_sn);
     setlocale(LC_ALL, 'zh_TW.utf8');
@@ -237,7 +234,7 @@ function del_file($files_sn)
 
 function list_file($data_sn, $temp_sn)
 {
-    global $TadUpFiles, $xoopsDB, $uid;
+    global $uid;
     $down_dir = XOOPS_ROOT_PATH . "/uploads/tad_merge/$uid/down_{$data_sn}/$temp_sn";
     if (is_dir($down_dir)) {
         if ($dh = opendir($down_dir)) {
@@ -255,7 +252,7 @@ function list_file($data_sn, $temp_sn)
 
 function download($data_sn, $temp_sn, $file)
 {
-    global $TadUpFiles, $xoopsDB, $uid;
+    global $uid;
 
     $down_dir = XOOPS_ROOT_PATH . "/uploads/tad_merge/$uid/down_{$data_sn}/$temp_sn";
 
@@ -344,7 +341,7 @@ switch ($op) {
 }
 
 /*-----------秀出結果區--------------*/
-$xoopsTpl->assign('toolbar', Utility::toolbar_bootstrap($interface_menu));
+$xoopsTpl->assign('toolbar', Utility::toolbar_bootstrap($interface_menu, false, $interface_icon));
 $xoopsTpl->assign('now_op', $op);
-$xoTheme->addStylesheet(XOOPS_URL . '/modules/tad_merge/css/module.css');
+$xoTheme->addStylesheet('modules/tad_merge/css/module.css');
 require_once XOOPS_ROOT_PATH . '/footer.php';
