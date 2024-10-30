@@ -37,3 +37,4 @@ define('_MD_TADMERGE_MERGER_VIEW', '查看');
 define('_MD_TADMERGE_MERGER_README', '使用說明');
 define('_MD_TADMERGE_MERGER_DEL_TEMP', '刪除套印檔（不會刪除對應的資料檔）');
 define('_MD_TADMERGE_MERGER_DEL_DATA', '刪除資料檔（不會刪除對應的套印檔）');
+define('_MD_TADMERGE_INDEX', '合併套印');

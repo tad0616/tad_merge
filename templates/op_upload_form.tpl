@@ -23,7 +23,7 @@
         <{if $data_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE}></label>
                 <div class="col-sm-4">
-                    <select name="data_sn" class="form-control">
+                    <select name="data_sn" class="form-select">
                         <option value=""></option>
                         <{foreach from=$data_file_arr key=data_files_sn item=filename}>
                             <option value="<{$data_files_sn|default:''}>"><{$filename|default:''}></option>
@@ -40,7 +40,7 @@
         <{if $temp_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_TPL_FILE}></label>
                 <div class="col-sm-4">
-                    <select name="temp_sn" class="form-control">
+                    <select name="temp_sn" class="form-select">
                         <option value=""></option>
                         <{foreach from=$temp_file_arr key=temp_files_sn item=filename}>
                             <option value="<{$temp_files_sn|default:''}>"><{$filename|default:''}></option>

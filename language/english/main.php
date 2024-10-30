@@ -21,8 +21,6 @@ xoops_loadLanguage('main', 'tadtools');
 
 define('_MD_TADMERGE_NO_PERMISSION', 'You don\'t have permission to use it~');
 define('_MD_TADMERGE_MERGER_COMPLETED', 'Merge complete');
-define('_MD_TADMERGE_MERGER_COMPLETED', 'Merged');
-define('_MD_TADMERGE_MERGER_COMPLETED', 'Merged');
 define('_MD_TADMERGE_MERGER_UPLOAD_XLSX', 'Please upload a .xlsx file (data file)');
 define('_MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE', 'or select an existing data file');
 define('_MD_TADMERGE_MERGER_UPLOAD_ODT', 'Please upload a .odt file (overprint file)');
@@ -38,3 +36,4 @@ define('_MD_TADMERGE_MERGER_VIEW', 'View');
 define('_MD_TADMERGE_MERGER_README', 'Instructions');
 define('_MD_TADMERGE_MERGER_DEL_TEMP', 'Delete sleeve file (does not delete corresponding data file)');
 define('_MD_TADMERGE_MERGER_DEL_DATA', 'Delete the data file (without deleting the corresponding sleeve)');
+define('_MD_TADMERGE_INDEX', 'consolidated overprint');
