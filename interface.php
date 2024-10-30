@@ -5,7 +5,7 @@ if (!isset($_SESSION['tad_merge_adm'])) {
 }
 
 $interface_menu[_MD_TADMERGE_INDEX] = "index.php";
-$interface_icon[_MD_TADMERGE_INDEX] = "fa-chevron-right";
+$interface_icon[_MD_TADMERGE_INDEX] = "fa-compress";
 
 $interface_menu[_MD_TADMERGE_MERGER_README] = "readme.php";
-$interface_icon[_MD_TADMERGE_MERGER_README] = "fa-chevron-right";
+$interface_icon[_MD_TADMERGE_MERGER_README] = "fa-book";
