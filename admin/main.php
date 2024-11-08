@@ -68,10 +68,4 @@ switch ($op) {
 
 /*-----------秀出結果區--------------*/
 $xoopsTpl->assign('now_op', $op);
-$xoTheme->addStylesheet('/modules/tadtools/css/font-awesome/css/font-awesome.css');
-if ($_SESSION['bootstrap'] == 4) {
-    $xoTheme->addStylesheet('modules/tadtools/css/xoops_adm4.css');
-} else {
-    $xoTheme->addStylesheet('modules/tadtools/css/xoops_adm3.css');
-}
 require_once __DIR__ . '/footer.php';
