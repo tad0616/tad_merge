@@ -1,11 +1,17 @@
-tad_merge 1.2 (released 2022-01-28)
+Tad merge 2.0 (released on 2024-11-11)
+====================================
+1.Support XOOPS 2.5.11
+2.Support PHP8.1.x
+3. Use $xoopsDB->escape() instead of $myts->addSlashes()
+
+Tad merge 1.2 (released on 2022-01-28)
 =================================================
 1.Support BootStrap5
 
-tad_merge 1.1 (released 2021-08-22)
+Tad merge 1.1 (released on 2021-08-22)
 =================================================
 1.Adjust the tad_merge_data_center field
 
-tad_merge 1.0 (released 2020-05-31)
+Tad merge 1.0 (released on 2020-05-30)
 =================================================
-1. release
+1.Officially released
