@@ -23,7 +23,7 @@
         <{if $data_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_DATA_FILE}></label>
                 <div class="col-sm-4">
-                    <select name="data_sn" class="form-select">
+                    <select name="data_sn" class="form-control form-select">
                         <option value=""></option>
                         <{foreach from=$data_file_arr key=data_files_sn item=filename}>
                             <option value="<{$data_files_sn|default:''}>"><{$filename|default:''}></option>
@@ -40,7 +40,7 @@
         <{if $temp_file_arr|default:false}>
                 <label class="col-sm-2 col-form-label text-right text-end"><{$smarty.const._MD_TADMERGE_MERGER_SELECT_EXISTING_TPL_FILE}></label>
                 <div class="col-sm-4">
-                    <select name="temp_sn" class="form-select">
+                    <select name="temp_sn" class="form-control form-select">
                         <option value=""></option>
                         <{foreach from=$temp_file_arr key=temp_files_sn item=filename}>
                             <option value="<{$temp_files_sn|default:''}>"><{$filename|default:''}></option>
@@ -81,7 +81,7 @@
                             <a href="index.php?op=merge&data_sn=<{$data_files_sn|default:''}>&temp_sn=<{$temp_files_sn|default:''}>" class="btn btn-sm btn-success"><i class="fa fa-play" aria-hidden="true"></i> <{if $temp_file.count > 0 }><{$smarty.const._MD_TADMERGE_MERGER_REMERGE}><{else}><{$smarty.const._MD_TADMERGE_MERGER_RUN}><{/if}></a>
                             <{if $temp_file.count > 0 }>
                                 <a href="index.php?op=download_all&data_sn=<{$data_files_sn|default:''}>&temp_sn=<{$temp_files_sn|default:''}>" class="btn btn-sm btn-info"><i class="fa fa-download" aria-hidden="true"></i> <{$smarty.const._MD_TADMERGE_MERGER_DOWNLOAD_ALL|sprintf:$temp_file.count}></a>
-                                <button type="button" id="view-<{$data_files_sn|default:''}>-<{$data_files_sn|default:''}>" data-data_sn="<{$data_files_sn|default:''}>" data-temp_sn="<{$temp_files_sn|default:''}>" class="btn btn-sm btn-warning view"><i class="fa fa-search" aria-hidden="true"></i> <{$smarty.const._MD_TADMERGE_MERGER_VIEW}></button>
+                                <button type="button" id="view-<{$data_files_sn|default:''}>-<{$data_files_sn|default:''}>" data-data_sn="<{$data_files_sn|default:''}>" data-temp_sn="<{$temp_files_sn|default:''}>" class="btn btn-sm btn-warning view"><i class="fa fa-magnifying-glass" aria-hidden="true"></i> <{$smarty.const._MD_TADMERGE_MERGER_VIEW}></button>
                             <{/if}>
                             <div id="display-<{$data_files_sn|default:''}>-<{$temp_files_sn|default:''}>" style="display:none;">
                                 <div id="list-<{$data_files_sn|default:''}>-<{$temp_files_sn|default:''}>"></div>
